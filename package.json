@@ -1,0 +1,35 @@
+{
+  "name": "audio-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "express": "^4.13.3",
+    "jspm": "^0.16.11"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+    "dependencies": {
+      "express": "npm:express@^4.13.3",
+      "facebook/emitter": "github:facebook/emitter@master",
+      "fbemitter": "npm:fbemitter@^2.0.0",
+      "jquery": "github:components/jquery@^2.1.4",
+      "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
+      "react": "npm:react@^0.13.3",
+      "react-router": "npm:react-router@^1.0.0-rc1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
