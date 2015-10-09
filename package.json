@@ -1,18 +1,33 @@
 {
-  "name": "audio-player",
-  "version": "1.0.0",
+  "name": "simple-audio-player",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "sap": "./bin/sap.js"
   },
-  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel index.js --out-file ./bin/sap.js",
+    "install": "npm run compile",
+    "prepublish": "npm run compile"
+  },
+  "author": "Michael Lawrence <me@mikelawrence.co>",
   "license": "MIT",
   "dependencies": {
     "commander": "^2.8.1",
     "express": "^4.13.3",
-    "jspm": "^0.16.11"
+    "jspm": "^0.16.11",
+    "vhost": "^3.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michael-lawrence/simple-audio-player"
+  },
+  "bugs": {
+    "url": "https://github.com/michael-lawrence/simple-audio-player/issues"
+  },
+  "preferGlobal": true,
   "jspm": {
     "directories": {
       "baseURL": "public"
@@ -23,8 +38,8 @@
       "fbemitter": "npm:fbemitter@^2.0.0",
       "jquery": "github:components/jquery@^2.1.4",
       "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
-      "react": "npm:react@^0.13.3",
-      "react-router": "npm:react-router@^1.0.0-rc1"
+      "material-ui": "npm:material-ui@^0.12.3",
+      "react": "npm:react@^0.13.3"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
